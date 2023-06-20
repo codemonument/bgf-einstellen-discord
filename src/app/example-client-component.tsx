@@ -8,9 +8,9 @@ export default function ExampleClientComponent() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const { data, isLoading } = useQuery<string>({
+  const { data, isLoading, error } = useQuery<string>({
     queryKey: ["example"],
-    queryFn: () => fetch("/api/example").then((res) => res.json()),
+    queryFn: () => fetch(new URL("/api/example", location.href) ).then((res) => res.text()),
   });
 
   //   TODo: Switch to tanstck query
@@ -21,8 +21,10 @@ export default function ExampleClientComponent() {
     <div>
       <p>Pathname: {pathname}</p>
       <p>searchParams: {searchParams.toString()}</p>
-      <p>Is /api/example loading?: {isLoading}</p>
-      <p>Response from /api/example: {data}</p>
+      <p>Is /api/example loading?: {isLoading ? "true" : "false"}</p>
+      <p>
+        Response from /api/example: {data ? data : (error as Error)?.message}
+      </p>
     </div>
   );
 
