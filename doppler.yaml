@@ -1,0 +1,3 @@
+setup:
+  project: bgf-einstellen-discord
+  config: dev
