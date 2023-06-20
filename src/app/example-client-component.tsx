@@ -10,7 +10,7 @@ export default function ExampleClientComponent() {
 
   const { data, isLoading, error } = useQuery<string>({
     queryKey: ["example"],
-    queryFn: () => fetch(new URL("/api/example", location.href) ).then((res) => res.text()),
+    queryFn: () => fetch("/api/example").then((res) => res.text()),
   });
 
   //   TODo: Switch to tanstck query
