@@ -8,6 +8,7 @@ export const env = createEnv({
    */
   server: {
     NODE_ENV: z.enum(["development", "test", "production"]),
+    DOPPLER_WORKS: z.coerce.boolean(),
   },
 
   /**
@@ -25,6 +26,7 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
+    DOPPLER_WORKS: process.env.DOPPLER_WORKS,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**
