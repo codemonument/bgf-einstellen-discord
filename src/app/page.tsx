@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ExampleClientComponent from "./debug/example-client-component";
 
 /**
  * This function can be async!
