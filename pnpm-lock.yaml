@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@t3-oss/env-nextjs':
     specifier: ^0.4.1
@@ -48,9 +52,6 @@ devDependencies:
   eslint-config-next:
     specifier: ^13.4.6
     version: 13.4.6(eslint@8.43.0)(typescript@5.1.3)
-  pnpm:
-    specifier: ^8.6.3
-    version: 8.6.3
   postcss:
     specifier: ^8.4.24
     version: 8.4.24
@@ -2196,12 +2197,6 @@ packages:
   /pirates@4.0.6:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
     engines: {node: '>= 6'}
-    dev: true
-
-  /pnpm@8.6.3:
-    resolution: {integrity: sha512-0Y4neugHIJEEa8y8oJMfd9wwgHkc1hIq6JC/UEEl2K92s3+zPaKH26n7u22m67E+MU6fpKRkx+/+PYWZzr5yQw==}
-    engines: {node: '>=16.14'}
-    hasBin: true
     dev: true
 
   /postcss-import@15.1.0(postcss@8.4.24):
