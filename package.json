@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "lint": "next lint",
-    "start": "next start"
+    "build": "doppler run -- next build",
+    "dev": "doppler run -- next dev",
+    "lint": "doppler run -- next lint",
+    "start": "doppler run -- next start"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.4.1",
