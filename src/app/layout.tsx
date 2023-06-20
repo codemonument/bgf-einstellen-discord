@@ -1,6 +1,6 @@
 import { type Metadata } from "next";
 import "../styles/globals.css";
-import { ReactQueryProvider } from "./tanstack-query-provider";
+import Providers from "./Providers";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -15,13 +15,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ReactQueryProvider>
-      <html lang="en">
-        <head>
-          <link rel="icon" href="/favicon.ico" />
-        </head>
-        <body>{children}</body>
-      </html>
-    </ReactQueryProvider>
+    <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body>
+        {/* Time: To avoid static rendering and caching! */}
+        <p>Time: {new Date().toISOString()}</p>
+        <Providers>{children}</Providers>
+      </body>
+    </html>
   );
 }
